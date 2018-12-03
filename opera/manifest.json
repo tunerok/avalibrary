@@ -1,0 +1,20 @@
+   {
+
+      "manifest_version": 2,
+
+      "name": "Avalibrary",
+      "description": "Доступ к библиотеке через прокси-сервер",
+      "version": "0.1",
+      "background": {
+      "scripts":["background.js", "popup.js"]
+      },
+      "browser_action": {
+            "default_icon": "icon.png",
+            "default_popup":"popup.html"
+        },
+    "permissions": [
+
+        "proxy"
+    ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+    }

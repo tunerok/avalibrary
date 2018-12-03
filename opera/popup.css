@@ -1,0 +1,43 @@
+body
+{
+  min-width: 100px;
+  margin: 0px;
+  font-family: Segoe UI, Arial, sans-serif;
+  font-size: 13px;
+  background-color: #f8f6f2;
+}
+
+header
+{
+  height: 10px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid #e1ddd8;
+}
+
+#logo
+{
+  display: block;
+  position: relative;
+  top: 0px;
+  margin: 0px auto;
+}
+
+#wrapper
+{
+  padding: 0px 10px;
+}
+
+footer
+{
+  
+  padding: 10px 20px;
+  border-top: 1px solid #e1ddd8;
+}
+
+
+
+
+label
+{
+  vertical-align: middle;
+}
