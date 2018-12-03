@@ -1,5 +1,5 @@
 function conn_proxy() {
-   //draw_cir("#00FF00");
+
         chrome.proxy.settings.set({
 value: {
 mode: "pac_script",
@@ -17,24 +17,14 @@ chrome.browserAction.setIcon({path: 'icon_g.png'});
 
 
 function disconn_proxy() {
-	
-	
-   // draw_cir("#FF0000");
-	
+		
 	
         var config = {
   mode: "system",
   
 };
 
-/*
-chrome.proxy.settings.get(
-      {'incognito': false},
-      function(config) {
-          console.log(JSON.stringify(config));
-      });
-*/
-	  
+  
 	  
 chrome.proxy.settings.set(
     {value: config, scope: 'regular'},

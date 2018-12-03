@@ -21,12 +21,7 @@
         },
   
   "permissions": [
-        "tabs",
-        "http://*/*",
-        "https://*/*",
-        "notifications",
-        "contextMenus",
-        "history",
+        
          "proxy"
     ],
 	

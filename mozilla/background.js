@@ -1,6 +1,6 @@
 
 function conn_proxy() {
-   //draw_cir("#00FF00");
+ 
    console.log("FUNC");
    
   // const proxyScriptURL = "";
@@ -25,7 +25,7 @@ browser.browserAction.setIcon({path: 'icon_g.png'});
 function disconn_proxy() {
 	
 	
-   // draw_cir("#FF0000");
+ 
 	
 	
  let proxySettings = {

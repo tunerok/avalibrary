@@ -18,19 +18,3 @@ function disconn()
 		browser.runtime.sendMessage({ msg: "dis"});
 }
 
-
-/*
-function draw_cir(s) {
-	
-	var canvas = document.getElementById("imgCanvas");
-    var context = canvas.getContext("2d");
-    var rect = canvas.getBoundingClientRect();
-    var posx = 50;
-    var posy = 10;
-
-    context.fillStyle = s ;
-    context.beginPath();
-    context.arc(posx, posy, 10, 0, 2 * Math.PI);
-    context.fill();
-	
-}*/
