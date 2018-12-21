@@ -2,31 +2,32 @@
 
   "manifest_version": 2,
   "name": "Avalibrary",
-  "version": "0.1",
+  "version": "0.2",
+  "browser_specific_settings": {
+  "gecko": {
+    "id": "addon@example.com",
+    "strict_min_version": "42.0"
+  }
+},
  
   "description": "Доступ к библиотеке через прокси-сервер",
-  
 
-  "applications": {
-    "gecko": {
-      "id": "Avalibrary@mozilla.org",
-      "strict_min_version": "45.0"
-    }
-  },
   
   "browser_action": {
 			"default_title": "Avalibrary",
-            "default_icon": "icon.png",
-            "default_popup":"popup.html"
+        "default_icon": "icon.png"
         },
+
+
   
   "permissions": [
         
-         "proxy"
+         "storage",
+        "proxy"
     ],
 	
 	"background": {
-    "scripts": ["background.js", "popup.js"]
+    "scripts": ["background.js"]
 	},
 
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"

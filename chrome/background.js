@@ -1,3 +1,8 @@
+'use strict';
+
+
+
+
 function conn_proxy() {
 
         chrome.proxy.settings.set({
@@ -36,9 +41,28 @@ chrome.browserAction.setIcon({path: 'icon.png'});
 
 
 
-chrome.extension.onMessage.addListener(
-    function(request, sender, sendResponse){
-        if(request.msg == "conn") conn_proxy();
-		if(request.msg == "dis") disconn_proxy();
-    }
-);
+
+
+
+function update_proxy(){
+chrome.storage.sync.get('number', function(data) {
+	var current = data.number;
+	if (current == 1){
+		conn_proxy();
+		current = 2;
+	}
+	else
+	{
+		disconn_proxy();
+		current = 1;
+	}
+	chrome.storage.sync.set({number: current}, function() {
+      console.log('The number is set to ' + current);
+    });
+
+});
+}
+
+
+chrome.browserAction.onClicked.addListener(update_proxy);
+

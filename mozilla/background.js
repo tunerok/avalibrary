@@ -1,51 +1,52 @@
+'use strict';
 
-function conn_proxy() {
- 
-   console.log("FUNC");
-   
-  // const proxyScriptURL = "";
+localStorage.setItem('number', '1');
 
-	//browser.proxy.register(proxyScriptURL);
-   
-   let proxySettings = {
-  proxyType: "manual",
-  autoConfigUrl:"proxyScriptURL",
 
+
+var proxyON = {
+	proxyType:"autoConfig",
+	autoConfigUrl:""
 };
 
-browser.proxy.settings.set({value: proxySettings});
- 
+var proxyOFF = {
+	proxyType: "system"
+};
 
-browser.browserAction.setIcon({path: 'icon_g.png'});		
-	console.log("ICON");
+function conn_proxy() {
+
+    browser.proxy.settings.set({value: proxyON});
+	browser.browserAction.setIcon({path: 'icon_g.png'});		
+	
 }
 
 
 
 function disconn_proxy() {
 	
-	
- 
-	
-	
- let proxySettings = {
-  proxyType: "system",
-  
-};
-
-browser.proxy.settings.set({value: proxySettings});
-
-	
-	
-browser.browserAction.setIcon({path: 'icon.png'});		
+    browser.proxy.settings.set({value: proxyOFF});
+	browser.browserAction.setIcon({path: 'icon.png'});	
 	
 	
 }
 
 
-browser.runtime.onMessage.addListener(
-	function(req, sen, resp){
-		if (req.msg == "conn") conn_proxy();
-		if (req.msg == "dis") disconn_proxy();
+function update_proxy(){
+	var gettingItem = localStorage.getItem('number');
+
+	var current = gettingItem;
+	if (current == '1'){
+		conn_proxy();
+		current = '2';
 	}
-		);
+	else
+	{
+		disconn_proxy();
+		current = '1';
+	}
+	localStorage.setItem('number', current);
+
+}
+
+
+browser.browserAction.onClicked.addListener(update_proxy);
