@@ -2,8 +2,8 @@
 
       "manifest_version": 2,
 
-      "name": "Avalibrary",
-      "description": "Доступ к библиотеке через прокси-сервер",
+      "name": "Avaproxy",
+      "description": "Управление настройками прокси у браузера",
       "version": "0.2",
       "options_page": "options.html",
       "background": {

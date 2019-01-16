@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head><title>My Test Extension Options</title></head>
+<head><title>Avalibrary Options</title>
+<meta charset="UTF-8" />
+</head>
 <body>
 
 Proxy mode:
@@ -10,6 +12,7 @@ Proxy mode:
  <option value="pac_script">Url to pac file</option>
  <option value="fixed_servers">Fixed</option>
  <option value="system">System</option>
+ <option value="pac_script_data">Pac-script data</option>
 </select>
 
 <div id="inputs">
@@ -23,7 +26,7 @@ Proxy mode:
 	<input name="second_inp" id="second_inp" />
 </div>
 </div>
-
+<label id="status" color ="green" ></label><br>
 <div id="status"></div>
 <button id="save">Save</button>
 <script src="options.js"></script>

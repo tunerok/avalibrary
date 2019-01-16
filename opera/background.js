@@ -4,7 +4,7 @@ function conn_proxy() {
 value: {
 mode: "pac_script",
 pacScript: {
-url: ""
+url: "http://proxy.fitos.org/proxy.pac"
 }
 }, scope: "regular"
 });
