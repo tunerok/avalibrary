@@ -1,10 +1,11 @@
    {
 
       "manifest_version": 2,
-
-      "name": "Avaproxy",
-      "description": "Управление настройками прокси у браузера",
+      
+      "name": "__MSG_extName__",
+      "description": "__MSG_extDescription__",
       "version": "0.2",
+      "default_locale" : "en",
       "options_page": "options.html",
       "background": {
       "scripts":["background.js"]

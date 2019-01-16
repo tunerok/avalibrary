@@ -1,0 +1,21 @@
+{
+	"extName":{
+		"message":"Avaproxy",
+		"description":"The title of the application"
+	},
+	"extDescription":{
+		"message":"description",
+		"description":"The description of the application"
+	},
+	"extSaveOptBtn":{
+		"message":"Save options",
+		"description":"The value of the save btn"
+	},
+	"extProxyMode":{
+		"message":"Proxy mode:",
+		"description":"The value of Proxy mode label btn"
+	}
+
+
+
+}

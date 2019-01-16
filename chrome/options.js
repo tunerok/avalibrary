@@ -5,6 +5,7 @@ var second_inp = document.getElementById('second_inp');
 //labels
 var first_label = document.getElementById('first_label');
 var second_label = document.getElementById('second_label');
+var proxy_mode_label = document.getElementById('proxy_mode_text');
 
 
 //divs
@@ -122,3 +123,10 @@ function save_options() {
     console.log('end');
 
   }
+
+
+  window.onload = function() {//running when popup page loading. need it to check login status
+  btn_save.innerHTML = chrome.i18n.getMessage("extSaveOptBtn");
+  proxy_mode_label.innerHTML = chrome.i18n.getMessage("extProxyMode");
+  
+}

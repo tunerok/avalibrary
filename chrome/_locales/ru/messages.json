@@ -1,0 +1,21 @@
+{
+	"extName":{
+		"message":"Avaproxy",
+		"description":"Тайтл программы"
+	},
+	"extDescription":{
+		"message":"Управление настройками прокси у браузера",
+		"description":"Описание программы"
+	},
+	"extSaveOptBtn":{
+		"message":"Сохранить настройки",
+		"description":"Текст кнопки сохранения"
+	},
+	"extProxyMode":{
+		"message":"Режим прокси:",
+		"description":"Текст описания типа прокси"
+	}
+	
+
+
+}
