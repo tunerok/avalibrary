@@ -31,18 +31,18 @@ function change_select(){
       second_div.style.visibility = 'hidden';
      break;
     case 'pac_script':
-      first_label.innerHTML = 'URL to PAC-file: ';
+      first_label.innerHTML = chrome.i18n.getMessage("extUrlToPacText");
       first_div.style.visibility = 'visible';
       second_div.style.visibility = 'hidden';
       break;
     case 'fixed_servers':
-      first_label.innerHTML = 'Host: ';
+      first_label.innerHTML = chrome.i18n.getMessage("extHostText");
       first_div.style.visibility = 'visible';
-      second_label.innerHTML = 'Port: ';
+      second_label.innerHTML = chrome.i18n.getMessage("extPortText");
       second_div.style.visibility = 'visible';
       break;
       case 'pac_script_data':
-        first_label.innerHTML = 'Pac-script data: ';
+        first_label.innerHTML = chrome.i18n.getMessage("extPACScriptText");
         first_div.style.visibility = 'visible';
         second_div.style.visibility = 'hidden';
       break;
@@ -52,23 +52,25 @@ function change_select(){
 
 
 window.onload = function() {
-  chrome.storage.sync.get('typep', function(datap){
+  btn_save.innerHTML = chrome.i18n.getMessage("extSaveOptBtn");
+  proxy_mode_label.innerHTML = chrome.i18n.getMessage("extProxyMode");
+  chrome.storage.local.get('typep', function(datap){
       var typep = datap.typep;
       if (typep != 1){
         var setter = "";
         switch (typep){
-        case 2: setter = "auto detect";
+        case 2: setter = chrome.i18n.getMessage("extTypepAD");
         break;
-        case 3: setter = "system";
+        case 3: setter = chrome.i18n.getMessage("extTypepSys");
         break;
-        case 4: setter = "pac script";
+        case 4: setter = chrome.i18n.getMessage("extTypepRPS");
         break;
-        case 5: setter = "fixed servers";
+        case 5: setter = chrome.i18n.getMessage("extTypepFS");
         break;
-        case 6: setter = "pac script data";
+        case 6: setter = chrome.i18n.getMessage("extTypepPSD");
         break;
       }
-        document.getElementById('status').innerHTML = "Текущие настройки прокси выставлены в " + setter;
+        document.getElementById('status').innerHTML = chrome.i18n.getMessage("extCurrentProxySettings") + setter;
       }
   });
   change_select();
@@ -81,52 +83,48 @@ function save_options() {
   var proxy_type = document.getElementById('proxy_type').value;
   switch(proxy_type){
     case 'direct':
-    status = "direct";
-    chrome.storage.sync.set({typep: 1, first:"", second:""}, function() {
+    status = chrome.i18n.getMessage("extTypepD");
+    chrome.storage.local.set({typep: 1, first:"", second:""}, function() {
       console.log('The type is set to 1');
     });
      break;
     case 'auto_detect':
-    status = "auto detect";
-    chrome.storage.sync.set({typep: 2, first:"", second:""}, function() {
+    status = chrome.i18n.getMessage("extTypepAD");
+    chrome.storage.local.set({typep: 2, first:"", second:""}, function() {
       console.log('The type is set to 2');
     });
      break;
     case 'system':
-    status = "system";
-    chrome.storage.sync.set({typep: 3, first:"", second:""}, function() {
+    status = chrome.i18n.getMessage("extTypepSys");
+    chrome.storage.local.set({typep: 3, first:"", second:""}, function() {
       console.log('The type is set to 3');
     });
      break;
     case 'pac_script':
-      status = "pac script";
-      chrome.storage.sync.set({typep: 4, first:first_inp.value, second:""}, function() {
+      status = chrome.i18n.getMessage("extTypepRPS");
+      chrome.storage.local.set({typep: 4, first:first_inp.value, second:""}, function() {
       console.log('The type is set to 4');
     });
       break;
     case 'fixed_servers':
-      status = "fixed";
-      chrome.storage.sync.set({typep: 5, first: first_inp.value, second:parseInt(second_inp.value, 10)}, function() {
+      status = chrome.i18n.getMessage("extTypepFS");
+      chrome.storage.local.set({typep: 5, first: first_inp.value, second:parseInt(second_inp.value, 10)}, function() {
       console.log('The type is set to 5');
       });
       break;
       case 'pac_script_data':
-      status = "pac script data";
-        chrome.storage.sync.set({typep: 6, first: first_inp.value, second:""}, function() {
+      status = chrome.i18n.getMessage("extTypepPSD");
+        chrome.storage.local.set({typep: 6, first: first_inp.value, second:""}, function() {
               console.log('The type is set to 6');
         });
       break;
 
 
     }
-    document.getElementById('status').innerHTML = "Настройки прокси выставлены " + status;
+    document.getElementById('status').innerHTML = chrome.i18n.getMessage("extSetProxySettings") + status;
     console.log('end');
 
   }
 
 
-  window.onload = function() {//running when popup page loading. need it to check login status
-  btn_save.innerHTML = chrome.i18n.getMessage("extSaveOptBtn");
-  proxy_mode_label.innerHTML = chrome.i18n.getMessage("extProxyMode");
   
-}

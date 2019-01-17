@@ -14,7 +14,57 @@
 	"extProxyMode":{
 		"message":"Proxy mode:",
 		"description":"The value of Proxy mode label btn"
+	},
+	"extCurrentProxySettings":{
+		"message":"The current proxy settings are set to ",
+		"description":"The text of current proxy settings"
+	},
+	"extSetProxySettings":{
+		"message":"Proxy settings are set to ",
+		"description":"The text of the proxy settings"
+	},
+	"extUrlToPacText":{
+		"message":"URL to PAC-file: ",
+		"description":"text url to pac"
+	},
+	"extHostText":{
+		"message":"Host: ",
+		"description":"text host label"
+	},
+	"extPortText":{
+		"message":"Port: ",
+		"description":"text port label"
+	},
+	"extPACScriptText":{
+		"message":"Pac-script data: ",
+		"description":"Pac-script data text"
+	},
+	"extTypepAD":{
+		"message":"auto detect",
+		"description":"ad type of proxy"
+	},
+	"extTypepSys":{
+		"message":"system",
+		"description":"sys type of proxy"
+	},
+	"extTypepRPS":{
+		"message":"remote pac script",
+		"description":"rps type of proxy"
+	},
+	"extTypepFS":{
+		"message":"fixed servers",
+		"description":"fs type of proxy"
+	},
+	"extTypepPSD":{
+		"message":"users' pac-script data",
+		"description":"psd proxy"
+	},
+	"extTypepD":{
+		"message":"direct",
+		"description":"direct proxy"
 	}
+
+
 
 
 

@@ -14,7 +14,56 @@
 	"extProxyMode":{
 		"message":"Режим прокси:",
 		"description":"Текст описания типа прокси"
+	},
+	"extCurrentProxySettings":{
+		"message":"Текущие настройки прокси выставлены в ",
+		"description":"текст текущих настроек"
+	},
+	"extSetProxySettings":{
+		"message":"Настройки прокси установлены в ",
+		"description":"текст настроек"
+	},
+	"extUrlToPacText":{
+		"message":"URL к PAC-файлу:",
+		"description":"текст URL к PAC-файлу:"
+	},
+	"extHostText":{
+		"message":"IP: ",
+		"description":"текст надписи хост"
+	},
+	"extPortText":{
+		"message":"Порт: ",
+		"description":"текст надписи порт"
+	},
+	"extPACScriptText":{
+		"message":"Данные PAC-скрипта: ",
+		"description":"текст пак скрипта"
+	},
+	"extTypepAD":{
+		"message":"автоматический режим",
+		"description":"авто режим текст"
+	},
+	"extTypepSys":{
+		"message":"режим, определяемый системой",
+		"description":"системный прокси"
+	},
+	"extTypepRPS":{
+		"message":"режим, определяемый удаленным PAC-скриптом",
+		"description":"пак скрипт прокси"
+	},
+	"extTypepFS":{
+		"message":"режим фиксированного сервера",
+		"description":"фикс прокси"
+	},
+	"extTypepPSD":{
+		"message":"режим, определяемый пользовательским PAC-скриптом",
+		"description":"псд прокси"
+	},
+	"extTypepD":{
+		"message":"режим прямого доступа",
+		"description":"прямой прокси"
 	}
+
 	
 
 
