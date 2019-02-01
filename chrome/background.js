@@ -60,7 +60,7 @@ chrome.storage.local.get(keys, function(datap) {
 		
 		
 	});
-	chrome.browserAction.setIcon({path: 'icon_g.png'});		
+	chrome.browserAction.setIcon({path: 'images/icon_on.png'});		
 	
 }
 
@@ -78,7 +78,7 @@ chrome.proxy.settings.set(
     {value: config, scope: 'regular'},
     function() {});
 	
-chrome.browserAction.setIcon({path: 'icon.png'});	
+chrome.browserAction.setIcon({path: 'images/icon32.png'});	
 	
 	
 }
