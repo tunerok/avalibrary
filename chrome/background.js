@@ -1,10 +1,10 @@
 'use strict';
 
 chrome.runtime.onInstalled.addListener(function() {
-  chrome.storage.local.set({number: 1}, function() {
+  chrome.storage.sync.set({number: 1}, function() {
     console.log('The number space created');
   });
-  chrome.storage.local.set({typep: 1}, function() {
+  chrome.storage.sync.set({typep: 1}, function() {
     console.log('The typep space created');
   });
 });
@@ -14,7 +14,7 @@ var keys = ["typep","first","second"];
 
 function conn_proxy() {
 
-chrome.storage.local.get(keys, function(datap) {
+chrome.storage.sync.get(keys, function(datap) {
 	var typep = datap.typep;
 	
 	switch(typep){

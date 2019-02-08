@@ -54,7 +54,7 @@ function change_select(){
 window.onload = function() {
   btn_save.innerHTML = chrome.i18n.getMessage("extSaveOptBtn");
   proxy_mode_label.innerHTML = chrome.i18n.getMessage("extProxyMode");
-  chrome.storage.local.get('typep', function(datap){
+  chrome.storage.sync.get('typep', function(datap){
       var typep = datap.typep;
       if (typep != 1){
         var setter = "";
@@ -84,37 +84,37 @@ function save_options() {
   switch(proxy_type){
     case 'direct':
     status = chrome.i18n.getMessage("extTypepD");
-    chrome.storage.local.set({typep: 1, first:"", second:""}, function() {
+    chrome.storage.sync.set({typep: 1, first:"", second:""}, function() {
       console.log('The type is set to 1');
     });
      break;
     case 'auto_detect':
     status = chrome.i18n.getMessage("extTypepAD");
-    chrome.storage.local.set({typep: 2, first:"", second:""}, function() {
+    chrome.storage.sync.set({typep: 2, first:"", second:""}, function() {
       console.log('The type is set to 2');
     });
      break;
     case 'system':
     status = chrome.i18n.getMessage("extTypepSys");
-    chrome.storage.local.set({typep: 3, first:"", second:""}, function() {
+    chrome.storage.sync.set({typep: 3, first:"", second:""}, function() {
       console.log('The type is set to 3');
     });
      break;
     case 'pac_script':
       status = chrome.i18n.getMessage("extTypepRPS");
-      chrome.storage.local.set({typep: 4, first:first_inp.value, second:""}, function() {
+      chrome.storage.sync.set({typep: 4, first:first_inp.value, second:""}, function() {
       console.log('The type is set to 4');
     });
       break;
     case 'fixed_servers':
       status = chrome.i18n.getMessage("extTypepFS");
-      chrome.storage.local.set({typep: 5, first: first_inp.value, second:parseInt(second_inp.value, 10)}, function() {
+      chrome.storage.sync.set({typep: 5, first: first_inp.value, second:parseInt(second_inp.value, 10)}, function() {
       console.log('The type is set to 5');
       });
       break;
       case 'pac_script_data':
       status = chrome.i18n.getMessage("extTypepPSD");
-        chrome.storage.local.set({typep: 6, first: first_inp.value, second:""}, function() {
+        chrome.storage.sync.set({typep: 6, first: first_inp.value, second:""}, function() {
               console.log('The type is set to 6');
         });
       break;
