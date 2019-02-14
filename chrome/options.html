@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><title>Avalibrary Options</title>
+	<link rel="stylesheet" href="options.css">
 <meta charset="UTF-8" />
 </head>
 <body>
@@ -15,7 +16,7 @@
  <option value="pac_script_data">Pac-script data</option>
 </select>
 
-<div id="inputs">
+<div id="inputs" >
 	<label id="proxy_status_text" align="center"></label><br>
 <div id="first_div">
 	<label id="first_label"></label><br>
@@ -23,8 +24,25 @@
 </div>
 <div id="second_div">
 	<label id="second_label" ></label><br>
-	<input name="second_inp" id="second_inp" />
+	<input name="second_inp" placeholder="0.0.0.0" id="second_inp" />
+
 </div>
+<div id="default_box_dev">
+	<input type="checkbox" id="default_box" name="checkbox">
+  <label for="checkbox">Use Default port</label>
+</div>
+<div id="scheme_selector">
+	<label id="scheme_text" align="center"></label><br>
+	<select id="scheme_type">
+		 <option value="http">http</option>
+		 <option value="https">https</option>
+		 <option value="socks4">socks4</option>
+		 <option value="socks5">socks5</option>
+</select>
+
+</div>>
+
+
 </div>
 <label id="status" color ="green" ></label><br>
 <div id="status"></div>
