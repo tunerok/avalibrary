@@ -13,6 +13,7 @@ var proxyOFF = {
 	proxyType: "system"
 };
 
+
 function conn_proxy() {
 
     browser.proxy.settings.set({value: proxyON});
